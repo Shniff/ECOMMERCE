@@ -1,12 +1,20 @@
 <?php
+<<<<<<< HEAD
     session_start();
     require_once("includes\header.php");
+=======
+    require_once("includes\header.php")
+>>>>>>> c20eb77e262bf4550b589ab7df30bd050ab112cd
 
 ?>
 
 <!-- Navbar -->
 <?php
+<<<<<<< HEAD
     require_once("includes\\navbar.php");
+=======
+    require_once("includes\\navbar.php")
+>>>>>>> c20eb77e262bf4550b589ab7df30bd050ab112cd
 
 ?>
 

@@ -20,23 +20,34 @@
                     </li>
 
                      <!-- Dropdown for Signed-in User -->
+<<<<<<< HEAD
                      <!-- User only show up if naka set yung $_SESSION -->
                       <?php if (isset($_SESSION["fullname"])){?>
 
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?php echo $_SESSION["fullname"];?> <!-- Replace with dynamic username -->
+=======
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            JohnDoe <!-- Replace with dynamic username -->
+>>>>>>> c20eb77e262bf4550b589ab7df30bd050ab112cd
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="userDropdown">
                             <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
                             <li><a class="dropdown-item" href="profile.html">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+<<<<<<< HEAD
                             
                         </ul>
                     </li>
 
                     <?php } ?>
+=======
+                        </ul>
+                    </li>
+>>>>>>> c20eb77e262bf4550b589ab7df30bd050ab112cd
                     
                 </ul>
             </div>
