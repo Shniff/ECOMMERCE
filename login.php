@@ -17,17 +17,10 @@
                         <h4>Login to Your Account</h4>
                     </div>
                     <div class="card-body">
-<<<<<<< HEAD
                         <form action="authLogin.php" method="POST">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
-=======
-                        <form action="#" method="POST">
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
->>>>>>> c20eb77e262bf4550b589ab7df30bd050ab112cd
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
