@@ -28,26 +28,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt->execute();
             $users = $stmt ->fetchAll();
             if($users){
-                /*echo $users[0]["password"];
-                  if(password_verify($password,$users[0]["password"];)){
-                    echo "login successful;
-                  }else{
-                    echo "password did not match";
-                  }
-                
-                */
-                if($password == $users[0]["password"]){
-                echo "user found".json_encode($users);
-                $_SESSION["fullname"] = $users[0]["fullname"];
+                if(password_verify($password, $users[0]["password"])){
+                  echo "user found".json_encode($users);
+                  header("location: /index.php");
+                  $_SESSION["fullname"] = $users[0]["fullname"];
+                } else {
+                  header("location: /login.php");
+                }
                 //$_SESSION ["fullname"] = $users[0]["fullname"];
             }else{
-                echo "user not exist";
+                echo "user does not exist";
+                header("location: /index.php");
             }
         }
-
-            //header("location: /registration.php?success=Connection Successful");
-            exit; 
-        } catch (Exception $e){
+            
+        catch (Exception $e){
             echo "Connection Failed: " . $e->getMessage();
         }
         
