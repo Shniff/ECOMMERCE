@@ -29,7 +29,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2>Product List</h2>
             <!-- Add New Product Button -->
-            <a href="<?php echo BASE_URL; ?>views/admin/product/add.php" class="btn btn-success">Add New Product</a>
+            <a href="<?php echo BASE_URL; ?>views/admin/products/add.php" class="btn btn-success">Add New Product</a>
         </div>
 
         <!-- Message Response -->
@@ -46,7 +46,7 @@
                     <strong><strong><?php echo $messageError; ?></strong></strong>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                    <?php } ?>
+        <?php } ?>
 
         <p class="text-center">Manage all products in the catalog</p>
         <hr>
@@ -70,4 +70,3 @@
     
 
     <?php require_once(ROOT_DIR."includes/footer.php");?>
-
