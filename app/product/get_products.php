@@ -15,7 +15,7 @@
         
 
     } catch (PDOException $e) {
-        echo "Connection Failed: " . $e->getMEssage();
+        echo "Connection Failed: " . $e->getMessage();
         $db = null;
 
     }
