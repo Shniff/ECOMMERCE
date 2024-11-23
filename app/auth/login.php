@@ -5,7 +5,8 @@ $password = $_POST["password"];
 
 session_start();
 
-include('../config/DatabaseConnect.php');
+require_once(__DIR__."/../config/Directories.php");
+include("../config/DatabaseConnect.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -29,18 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['is_admin'] = $users[0]['is_admin'];
 
                 // Redirect to homepage
-                header("location: /index.php");
+                header("location: ".BASE_URL."index.php");
                 exit;
             } else {
                 // Incorrect password
                 $_SESSION["error"] = "Incorrect Password";
-                header("location: /login.php");
+                header("location: " .BASE_URL."login.php");
                 exit;
             }
         } else {
             // User not found
             $_SESSION["error"] = "User does not exist";
-            header("location: /login.php");
+            header("location: ".BASE_URL."login.php");
             exit;
         }
     } catch (Exception $e) {

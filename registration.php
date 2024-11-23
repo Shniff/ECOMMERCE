@@ -1,6 +1,8 @@
 <?php
     session_start();
-    require_once("includes\header.php");
+    require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
+    require_once(ROOT_DIR."includes/header.php");
+    
 
     if(isset($_SESSION["success"])){
         $messageSuccess = $_SESSION["success"];
@@ -50,7 +52,7 @@
                     </div>
                     <?php } ?>
 
-                        <form action="app/auth/register.php" method="POST">
+                        <form action="<?php echo BASE_URL;?>app/auth/register.php" method="POST">
                             <div class="mb-3">
                                 <label for="fullName" class="form-label">Full Name</label>
                                 <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
