@@ -1,6 +1,12 @@
 <?php
 
 class DatabaseConnect{
+    // private $host = "localhost";
+    // private $database = "ecommerce_cabinion";
+    // private $dbusername = "cabinion";
+    // private $dbpassword = "C4b1n!0N_2024";
+    // private $conn = null;
+
     private $host = "localhost";
     private $database = "ecommerce";
     private $dbusername = "root";
